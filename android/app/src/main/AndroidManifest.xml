@@ -25,10 +25,7 @@
             </intent-filter>
         </activity>
 
-        <!-- Notification Service -->
-        <service
-            android:name="com.dexterous.flutterlocalnotifications.FlutterLocalNotificationsPlugin"
-            android:exported="false" />
+        
 
         <!-- Boot Receiver -->
         <receiver
