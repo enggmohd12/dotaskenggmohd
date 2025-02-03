@@ -112,6 +112,7 @@ class _TaskViewState extends State<TaskView> {
 
         widget.task?.save();
         Navigator.of(context).pop();
+        
       } catch (error) {
         nothingEnterOnUpdateTaskMode(context);
       }

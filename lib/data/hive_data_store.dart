@@ -1,3 +1,4 @@
+import 'package:dotaskenggmohd/main.dart';
 import 'package:flutter/foundation.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -11,6 +12,7 @@ class HiveDataStore {
   /// Add new Task
   Future<void> addTask({required Task task}) async {
     await box.put(task.id, task);
+    await scheduleNotification(task);
   }
 
   /// Show task
@@ -21,6 +23,7 @@ class HiveDataStore {
   /// Update task
   Future<void> updateTask({required Task task}) async {
     await task.save();
+    await scheduleNotification(task);
   }
 
   /// Delete task
